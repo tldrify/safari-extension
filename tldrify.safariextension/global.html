@@ -1,0 +1,9 @@
+<script>
+safari.application.addEventListener("command", tldrify, false);
+ 
+function tldrify(event) {
+	if (event.command == "tldrify") {
+		safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("tldrify");
+	}
+}
+</script>
